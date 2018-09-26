@@ -1,0 +1,272 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>x</title>
+  <meta name="keywords" content="free css templates, real estate website, website templates, W3C, CSS, XHTML" />
+  <meta name="description" content="Real Estate Template - Free CSS Template, W3C compliant XHTML CSS layout" />
+  <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="templatemo_style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="gallery_style.css" />
+</head>
+
+
+<script src="serviceController.js"></script>
+
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left" >
+      <ul class="nospace">
+        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="about.html" style="text-decoration: none">About</a></li>
+        <li><a href="contact.html" style="text-decoration: none">Contact</a></li>
+        <li><a href="#" style="text-decoration: none">Advertise</a></li>
+        <li><a href="#!/register" style="text-decoration: none">Register</a></li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace">
+        <li><i class="fa fa-phone"></i> +1 (410) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1" style="text-decoration: none">
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left" >
+      <h1><a href="index.html" style="text-decoration: none">UMBC</a></h1>
+      <p>Rental solutions</p>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="index.html" style="text-decoration: none">Home</a></li>
+       <!-- <li><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Dropdown</a>
+          <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Level 2</a></li>
+          </ul>
+        </li>-->
+        <li><a href="about.html" style="text-decoration: none">About</a></li>
+        <li><a href="contact.html" style="text-decoration: none">Contact</a></li>
+        <li><a href="#!/login" style="text-decoration: none" >Logout</a></li>
+
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('manhattan_rental_report.0.jpg');">
+  <div id="pageintro" class="hoc clear">
+
+
+<div class="container" style="width: 100%; text-decoration: none" >
+  <div id="templatemo_news_section">
+    <h1 style="color:white">UMBC RENTAL</h1>
+    <div class="templatemo_news_box">
+      <h1 style="color:white">Hi {{vm.user.firstName}}!</h1>
+      <h1 style="color:white">Preferred Location {{vm.user.Location}}!</h1>
+      <h1 style="color:white">Preferred Gender {{vm.user.Gender}}!</h1>
+      <h1 style="color:white">Recommended for you</h1>
+
+      <div class="x" style=" overflow-x: hidden;   white-space:nowrap; ">
+        <div class="y" style="  overflow-x: scroll ">
+        <div ng-repeat="service in recommendations[0]" class="templatemo_section_2" style=" padding:12px; display: inline-block" >
+        <img src="house.png" style="width:220px; height:200px;" alt="image" />
+        <h4>{{service.id}}</h4>
+        <p> {{service.Address}}</p>
+        <div class="price" style="color:White">PRICE:<span>{{service.price}}</span></div>
+        <div class="readmore"><a href="subpage.html">{{service.Readmore}}</a></div>
+          <p style="display: inline-block">
+        <input type="submit" data="{{service.id}}" style="background-color: #0a1521" value="details" name="book" class="submit_btn_02"  ng-click="book($event)" />
+       <!-- <input type="submit" data="{{service.id}}" style="background-color: #0a1521" value="cancel" name="cancel" class="submit_btn_02"  ng-click="delete($event)" />
+          --></p></div>
+      </div>
+  </div><!-- end of news section -->
+
+  <div id="templatemo_section_1_1" style="margin-top: 50px">
+    <h1 >Find a property</h1>
+    <form method="POST" ng-submit="SendData()">
+      <div class="left_column">
+
+        <div  class="form_row" >
+          <label  >City: </label> <input type="text" style="color: #0b1827" name="country" ng-model="data[0]" value="" />  </div>
+        <div class="form_row"> <label>Sate / Province: </label>
+          <select name="state" ng-model="data[1]"><option>Select one...</option><option>AL</option><option>AK</option><option>AR</option><option>AZ</option><option>CA</option><option>CO</option><option>CT</option><option>DC</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option><option>IA</option><option>IL</option><option>IN</option><option>KS</option><option>KY</option><option>LA</option><option>MA</option><option>MD</option><option>ME</option><option>MI</option><option>MO</option><option>MN</option><option>MS</option><option>MT</option><option>NC</option><option>ND</option><option>NE</option><option>NH</option><option>NJ</option><option>NM</option><option>NY</option><option>NV</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VA</option><option>VT</option><option>WA</option><option>WI</option><option>WV</option><option>WY</option></select>
+        </div>
+        <div class="form_row"> <label>Zip / Postal code </label><input type="text" name="country" style="color: #0b1827"  ng-model="data[2]" value="" /> </div>
+      </div>
+      <div class="right_column">
+        <div class="form_row">
+          <label>Price: </label>
+          <select name="min_price" ng-model="data[3]">
+            <option>minimum</option>
+            <option>$50,000</option>
+            <option>$100,000</option>
+            <option>$150,000</option>
+            <option>$200,000</option>
+            <option>$250,000</option>
+          </select>
+          <select name="max-price" ng-model="data[4]">
+            <option>maximum</option>
+            <option>$100,000</option>
+            <option>$200,000</option>
+            <option>$400,000</option>
+            <option>$600,000</option>
+            <option>$800,000</option>
+          </select>
+        </div>
+        <div class="form_row"> <label>Bedroom: </label>
+          <select name="bedroom" ng-model="data[5]">
+            <option>minimum</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form_row"> <label>Bathroom: </label>
+          <select name="bathroom" ng-model="data[6]" >
+            <option>minimum</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+
+      </div>
+        <div   class="form_row">
+          <input type="submit" value="submit" name="submit" class="submit_btn_02"  ng-click="SendData()" style="margin-left: 40px" />
+        </div>
+      </div>
+
+    </form>
+  </div><!-- end of section 1 -->
+  <div class="cleaner_with_height">&nbsp;</div>
+</div>
+
+  <div id="templatemo_content_panel_2">
+    <div  ng-repeat="service in services[0]" class="templatemo_section_2">
+      <img src="house.png" style="width:150px; height:150px; border-color: transparent" alt="image" />
+      <h4>{{service.id}}</h4>
+      <p> {{service.Address}}</p>
+      <div class="price" style="color:White">PRICE:<span>{{service.price}}</span></div>
+      <div class="readmore"><a href="subpage.html">{{service.Readmore}}</a></div>
+      <p style="display: inline-block">
+      <input type="submit" data="{{service.id}}" style="background-color: #0a1521" value="details" name="book" class="submit_btn_02"  ng-click="book($event)" />
+    <!--  <input type="submit" data="{{service.id}}" style="background-color: #0a1521" value="cancel" name="cancel" class="submit_btn_02"  ng-click="delete($event)" />
+      --></p></div>
+
+  </div> <!-- end of content panel 2 -->
+
+  <!--<p style="padding-left: 1000px"><a href="#!/login" style="text-decoration: none" class="btn btn-primary">Logout</a></p>-->
+
+  </div></div>
+
+</div></div><div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#" style="text-decoration: none">UMBC rental solutions</a></p>
+    <!-- <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+     --><!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h6 class="title">What we do?</h6>
+      <p>Connecting student renters with great rental opportunities in and around UMBC campus.</p>
+      <p class="btmspace-15">New rental listings are posted daily so check back often for new rental ads. You won't want to miss out on a new place near campus for next semester. Connect with us.</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="title">Where we are?</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+            Carmella Drive &amp; 4837, Arbutus, 21227
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +1 (423) 446 7790</li>
+        <li><i class="fa fa-fax"></i> +1 (125) 156 4567</li>
+        <li><i class="fa fa-envelope-o"></i> info@umbc.edu</li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="title">How are we doing?</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <h2 class="nospace font-x1"><a href="#" style="text-decoration: none">Jinal gala</a></h2>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> December 2017</time>
+            <p class="nospace">Great website. Made my life easier.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2 class="nospace font-x1"><a href="#" style="text-decoration: none">Sweta Basundhara</a></h2>
+            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> December 2017</time>
+            <p class="nospace">Grateful for this site. Found a beautiful place with amazing roommates.</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top" style="text-decoration: none"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/jquery.backtotop.js"></script>
+<script src="scripts/jquery.mobilemenu.js"></script>
+
+
+
+
+
